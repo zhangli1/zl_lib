@@ -1,10 +1,10 @@
-package main
+package zl_lib
 
 import (
 	"fmt"
 
-	l4g "code.google.com/p/log4go"
-	"github.com/go-gomail/gomail"
+	l4g "zl_lib/code.google.com/p/log4go"
+	"zl_lib/github.com/go-gomail/gomail"
 )
 
 type Email struct {

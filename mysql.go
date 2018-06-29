@@ -1,12 +1,12 @@
-package main
+package zl_lib
 
 import (
 	"database/sql"
 	//"fmt"
 	//"os"
 
-	l4g "code.google.com/p/log4go"
-	_ "github.com/go-sql-driver/mysql"
+	l4g "zl_lib/code.google.com/p/log4go"
+	_ "zl_lib/github.com/go-sql-driver/mysql"
 )
 
 type Mysql struct {

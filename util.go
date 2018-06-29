@@ -1,7 +1,8 @@
-package main
+package zl_lib
 
 import (
 	"fmt"
+	"strings"
 	"time"
 )
 
@@ -27,4 +28,14 @@ func DateToTimestamp(date_format string, date string) int {
 	theTime, _ := time.ParseInLocation(date_format, date, loc)
 	return int(theTime.Unix())
 
+}
+
+func ParsePostParam(PostParam string) map[string]string {
+	ret := make(map[string]string)
+	slice_tmp := strings.Split(PostParam, "&")
+	for _, v := range slice_tmp {
+		map_tmp := strings.Split(v, "=")
+		ret[map_tmp[0]] = map_tmp[1]
+	}
+	return ret
 }
